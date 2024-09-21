@@ -24,23 +24,6 @@ string encryption(const string& text, const string& esh, const string& desh, int
     return encr;
 }
 
-
-string decryption(const string& text, const string& esh, const string& desh, int size) {
-    string decr;
-    for (int i = 0; i < size; i++) {
-        char current = text[i];
-        for (int j = 0; j < 26; j++) {
-            if (current == desh[j]) {
-                decr += esh[j];
-                break;
-            }
-        }
-    }
-    return decr;
-}
-
-
-
 int main() {
      string esh, desh;
      
